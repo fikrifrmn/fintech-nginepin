@@ -35,7 +35,7 @@ app.use((req, res, next) => {
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "http://127.0.0.1:5500",
+  origin: "https://fintech-nginepin.vercel.app",
   credentials: true,
 }));
 app.use(bodyParser.json());
