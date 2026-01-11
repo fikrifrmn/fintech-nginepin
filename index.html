@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueFlame Stay - Stay Cool, Stay Blue</title>
+    <meta name="description" content="Nginep.In - Modern Gen Z hotel with smart rooms, VR lounge, and Instagrammable spaces. Stay cool, stay blue.">
+    <meta name="keywords" content="Gen Z hotel, modern hotel, blue flame, smart rooms, instagram hotel, tech hotel">
+    <meta property="og:title" content="Nginep.In - Your Ultimate Hotel Experience">
+    <meta property="og:description" content="Your vibes, our space. Experience the future of hotel stays with Nginep.In.">
+    <meta name="twitter:title" content="Nginep.In - Your Ultimate Gen Z Hotel Experience">
+    <meta name="twitter:description" content="Your vibes, our space. Experience the future of hotel stays with Nginep.In.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        * {
+            --primary-color: #0F52BA;
+            --secondary-color: #3F00FF;
+            --accent-color: #89CFF0;
+            --dark-bg: #0a0e1a;
+            --card-bg: rgba(15, 82, 186, 0.1);
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--dark-bg)] text-white;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    }
+
+    @layer components {
+        .glow-button {
+            @apply bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
+                   px-8 py-3 rounded-full font-semibold 
+                   transition-all duration-300 shadow-lg;
+        }
+        
+        .glow-button:hover {
+            @apply shadow-[0_0_20px_rgba(15,82,186,0.6)] scale-105;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px rgba(137, 207, 240, 0.8), 
+                         0 0 20px rgba(15, 82, 186, 0.6);
+        }
+        
+        .card-glow {
+            @apply bg-[var(--card-bg)] backdrop-blur-sm border border-[var(--primary-color)] 
+                   rounded-2xl p-6 transition-all duration-300;
+        }
+        
+        .card-glow:hover {
+            @apply shadow-[0_0_30px_rgba(15,82,186,0.4)] scale-105 border-[var(--accent-color)];
+        }
+    }
+
+    @layer utilities {
+        .gradient-text {
+            background: linear-gradient(135deg, #89CFF0, #0F52BA, #3F00FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="components/AuthCheck.js"></script>
+    <script type="text/babel" src="components/Navbar.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/About.js"></script>
+    <script type="text/babel" src="components/Rooms.js"></script>
+    <script type="text/babel" src="components/Facilities.js"></script>
+    <script type="text/babel" src="components/Testimonials.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
