@@ -9,7 +9,7 @@ function Rooms() {
     const fetchRooms = async () => {
       try {
         setLoading(true); // Mulai loading
-        const res = await fetch("http://localhost:5000/api/rooms");
+        const res = await fetch("https://fintech-nginepin-production.up.railway.app/api/rooms");
         
         if (!res.ok) {
           // Buang error jika respons HTTP tidak 200-299

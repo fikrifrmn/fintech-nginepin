@@ -54,7 +54,7 @@ function PaymentPage() {
 
     try {
       // Generate Snap token
-      const response = await fetch("http://localhost:5000/api/create-snap-token", {
+      const response = await fetch("https://fintech-nginepin-production.up.railway.app/api/create-snap-token", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ function PaymentPage() {
           try {
             console.log("💳 Payment success from Midtrans:", result);
             
-            const response = await fetch(`http://localhost:5000/api/bookings/${booking.id}/confirm-payment`, {
+            const response = await fetch(`https://fintech-nginepin-production.up.railway.app/api/bookings/${booking.id}/confirm-payment`, {
               method: "POST",
               headers: { 
                 "Content-Type": "application/json",

@@ -25,7 +25,7 @@ function AdminBookings() {
   useEffect(() => {
   const token = localStorage.getItem("blueflame_token");
 
-  fetch("http://localhost:5000/api/admin/bookings/preview", {
+  fetch("https://fintech-nginepin-production.up.railway.app/api/admin/bookings/preview", {
     headers: {
       "Authorization": `Bearer ${token}`
     }

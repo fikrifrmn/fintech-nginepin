@@ -36,7 +36,7 @@ function DetailPage() {
     const fetchBooking = async () => {
         try {
             // Mengambil data REAL dari Backend
-            const response = await fetch(`http://localhost:5000/api/bookings/${bookingId}`, {
+            const response = await fetch(`https://fintech-nginepin-production.up.railway.app/api/bookings/${bookingId}`, {
                 method: "GET",
                 headers: { 
                     "Content-Type": "application/json",

@@ -25,7 +25,7 @@ function AdminRooms() {
 
   const fetchRooms = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/rooms");
+      const res = await fetch("https://fintech-nginepin-production.up.railway.app/api/rooms");
       if (!res.ok) throw new Error();
       const data = await res.json();
       console.log("🔥 DATA DARI BACKEND:", data);
@@ -71,7 +71,7 @@ function AdminRooms() {
 
       form.append("image", imageFile);
 
-      const res = await fetch("http://localhost:5000/api/admin/add-room", {
+      const res = await fetch("https://fintech-nginepin-production.up.railway.app/api/admin/add-room", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`
@@ -105,7 +105,7 @@ function AdminRooms() {
   // ================= UPDATE =================
   const handleSave = async (roomId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/rooms/${roomId}`, {
+      const res = await fetch(`https://fintech-nginepin-production.up.railway.app/api/rooms/${roomId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

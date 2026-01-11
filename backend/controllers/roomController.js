@@ -22,7 +22,7 @@ export const getRoomsWithFacilities = (req, res) => {
       name: r.name,
       price: Number(r.price),
       image: r.image_url
-        ? `http://localhost:5000/assets/rooms/${r.image_url}`
+        ? `https://fintech-nginepin-production.up.railway.app/assets/rooms/${r.image_url}`
         : "https://via.placeholder.com/400x300?text=Room",
       features: r.features
         ? r.features.split(",").map(f => f.trim())

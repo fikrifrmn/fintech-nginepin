@@ -4,7 +4,7 @@ function AdminStats() {
   const [totalRooms, setTotalRooms] = useState("Loading...");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/rooms/amount")
+    fetch("https://fintech-nginepin-production.up.railway.app/api/rooms/amount")
       .then((res) => res.json())
       .then((data) => {
         if (data.success) setTotalRooms(data.total);
@@ -20,7 +20,7 @@ function AdminStats() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/bookings/stats/dashboard", {
+    fetch("https://fintech-nginepin-production.up.railway.app/api/bookings/stats/dashboard", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("blueflame_token")}`
       }

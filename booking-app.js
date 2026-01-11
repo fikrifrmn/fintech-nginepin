@@ -68,7 +68,7 @@ function BookingPage() {
       guests: guests
     };
 
-    const res = await fetch("http://localhost:5000/api/bookings", {
+    const res = await fetch("https://fintech-nginepin-production.up.railway.app/api/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -106,7 +106,7 @@ function BookingPage() {
   React.useEffect(() => {
   setLoading(true);
 
-  fetch("http://localhost:5000/api/rooms")
+  fetch("https://fintech-nginepin-production.up.railway.app/api/rooms")
     .then(res => {
       if (!res.ok) throw new Error("Failed to load rooms");
       return res.json();
